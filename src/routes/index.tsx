@@ -267,14 +267,11 @@ function Countdown() {
 
 /* ---------------- Programme ---------------- */
 const EVENTS = [
-  { name: "Mehendi", date: "2027-02-12T16:00:00+05:30", place: "Lotus Courtyard", dress: "Greens & florals" },
-  { name: "Haldi", date: "2027-02-13T10:00:00+05:30", place: "Riverside Lawns", dress: "Yellow & marigold" },
-  { name: "Wedding", date: "2027-02-14T19:00:00+05:30", place: "The Grand Pavilion, Ghat Steps", dress: "Traditional — saffron, red & gold" },
-  { name: "Reception", date: "2027-02-15T20:00:00+05:30", place: "The Grand Pavilion Ballroom", dress: "Black tie / Indo-western" },
+  { name: "Mehendi", date: "2027-02-12T16:00:00+05:30", when: "Friday 12 February · 4:00 pm IST", place: "Lotus Courtyard", dress: "Greens & florals" },
+  { name: "Haldi", date: "2027-02-13T10:00:00+05:30", when: "Saturday 13 February · 10:00 am IST", place: "Riverside Lawns", dress: "Yellow & marigold" },
+  { name: "Wedding", date: "2027-02-14T19:00:00+05:30", when: "Sunday 14 February · 7:00 pm IST", place: "The Grand Pavilion, Ghat Steps", dress: "Traditional — saffron, red & gold" },
+  { name: "Reception", date: "2027-02-15T20:00:00+05:30", when: "Monday 15 February · 8:00 pm IST", place: "The Grand Pavilion Ballroom", dress: "Black tie / Indo-western" },
 ];
-const fmt = (iso: string) =>
-  new Intl.DateTimeFormat("en-IN", { timeZone: "Asia/Kolkata", weekday: "long", day: "numeric", month: "long", hour: "numeric", minute: "2-digit" }).format(new Date(iso));
-
 function Programme() {
   return (
     <Section dark>
@@ -285,7 +282,7 @@ function Programme() {
             <p className="font-display text-sm italic text-muted-foreground">{["I", "II", "III", "IV"][i]}</p>
             <h3 className="mt-1 font-display text-4xl italic text-accent">{e.name}</h3>
             <div className="mx-auto my-4 h-px w-12" style={{ background: "var(--gold-gradient)" }} />
-            <p className="font-display text-xl text-foreground">{fmt(e.date)}</p>
+            <p className="font-display text-xl text-foreground"><time dateTime={e.date}>{e.when}</time></p>
             <p className="mt-1 text-sm text-muted-foreground">{e.place}</p>
             <p className="label-caps mt-5 text-foreground"><span className="text-accent">Attire</span> · {e.dress}</p>
           </Frame>
