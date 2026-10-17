@@ -114,7 +114,7 @@ function SealedCard({ stage, onOpen }: { stage: string; onOpen: () => void }) {
         <div className="leaf leaf-right"><img src={sealedImg} alt="" className="leaf-img" width={1536} height={1024} /></div>
         <div className="pointer-events-none absolute inset-0" style={{ background: "var(--dusk-veil)" }} />
 
-        <div className="seal seal-idle absolute left-1/2 top-[46%] w-[34vmin] max-w-[220px] min-w-[120px] -translate-x-1/2 -translate-y-1/2">
+        <div className="seal-idle absolute left-1/2 top-[46%] w-[34vmin] max-w-[220px] min-w-[120px] -translate-x-1/2 -translate-y-1/2">
           <div className="seal">
             <img src={sealImg} alt="" width={816} height={816} className="w-full" />
             <span className="absolute inset-0 flex items-center justify-center font-display text-[7vmin] font-semibold italic sm:text-[2.6rem]" style={{ color: "var(--tint)", textShadow: "0 1px 0 var(--scratch-ink), 0 -1px 0 var(--accent-soft)" }}>
