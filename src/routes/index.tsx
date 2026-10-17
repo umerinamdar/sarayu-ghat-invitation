@@ -163,7 +163,7 @@ function Section({ children, dark = false, id }: { children: ReactNode; dark?: b
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
-    const io = new IntersectionObserver(([e]) => e.isIntersecting && el.classList.add("in-view"), { threshold: 0.12 });
+    const io = new IntersectionObserver(([e]) => e?.isIntersecting && el.classList.add("in-view"), { threshold: 0.12 });
     io.observe(el);
     return () => io.disconnect();
   }, []);
