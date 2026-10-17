@@ -139,7 +139,7 @@ function Hero({ onDateReveal }: { onDateReveal: () => void }) {
   return (
     <section className="relative flex min-h-[100dvh] flex-col items-center justify-center overflow-hidden px-4 py-20 text-center">
       <img src={heroImg} alt="Riverside temple ghat at dusk with floating diyas" className="hero-img absolute inset-0 h-full w-full object-cover" width={1536} height={1024} />
-      <div className="absolute inset-0" style={{ background: "radial-gradient(ellipse 60% 55% at 50% 48%, color-mix(in oklab, var(--scratch-ink) 45%, transparent), transparent 75%), var(--dusk-veil)" }} />
+      <div className="absolute inset-0" style={{ background: "radial-gradient(ellipse 75% 50% at 50% 40%, color-mix(in oklab, var(--scratch-ink) 72%, transparent), transparent 80%), var(--dusk-veil)" }} />
       <div className="relative z-10 flex flex-col items-center">
         <p className="rise d1 label-caps" style={{ color: "var(--tint)" }}>Shubh Vivah · With the blessings of Shri Ram</p>
         <h1 className="rise d2 mt-5 font-display text-6xl font-medium italic leading-[0.9] sm:text-8xl lg:text-9xl">
